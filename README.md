@@ -1,9 +1,8 @@
 # Random Joke Generator
-> With learning how to use Github and Github flow, I'm creating a Javascript program that outputs a random joke every time it is run in Node.
+> With learning how to use Github and Github flow, I'm creating a Javascript program that outputs a random joke every time it is run in Node.js.
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -13,19 +12,18 @@
 ## General info
 The program will log a random string, each of which is a different joke, from an array to the console using Node.js.
 
-## Screenshots
-No screenshots yet.
-
 ## Technologies
 * VS Code - Version 1.52.0
 * git version 2.29.2.windows.2
 * Node.js
 
 ## Setup
-Not really sure yet, still figuring this out.
+Running the program in Node.js will output a random joke to the console from an array containing 20 unique strings of bad jokes.
 
 ## Code Examples
-TBD
+const randomJoke = arr => {
+    console.log(arr[Math.floor(Math.random()*arr.length)]);
+};
 
 ## Features
 List of features ready and TODOs for future development
