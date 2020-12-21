@@ -106,44 +106,50 @@ let adjArr = [
 ]//end of adjArr
 
 let placeArr = [
-    'In Cairo',
-    'In Tokyo',
-    'In Sydney',
-    'In Portland',
-    'In San Francisco',
-    'In New York City',
-    'On Mars',
-    'On Pluto!'
+    'Cairo, Egypt!',
+    'Tokyo, Japan!',
+    'Sydney, Australia!',
+    'Portland, Oregon!',
+    'San Francisco, California!',
+    'New York, New York!',
+    'Mars!',
+    'Pluto!'
 ]
 
 const randomJokeSetup = (qArr,subjectArr,vArr1,vArr2,nArr,tArr,adjArr,placeArr) => {
     qArr = qArr[Math.floor(Math.random()*qArr.length)];
     subjectArr = subjectArr[Math.floor(Math.random()*subjectArr.length)];
-    vArr1 = vArr1[Math.floor(Math.random()*vArr1.length)];
-    vArr2 = vArr2[Math.floor(Math.random()*vArr2.length)];
-    nArr = nArr[Math.floor(Math.random()*nArr.length)];
+    let vArrX;
+    vArrX = vArr1[Math.floor(Math.random()*vArr1.length)];
+    let vArrY;
+    vArrY = vArr2[Math.floor(Math.random()*vArr2.length)];
+    let nArrX;
+    nArrX = nArr[Math.floor(Math.random()*nArr.length)];
     tArr = tArr[Math.floor(Math.random()*tArr.length)];
     adjArr = adjArr[Math.floor(Math.random()*adjArr.length)];
     placeArr = placeArr[Math.floor(Math.random()*placeArr.length)];
     
     if(qArr === 'What do'){
-        console.log(`${qArr} ${subjectArr} ${vArr1} ${vArr2} ${tArr}?`);
-        console.log(`${nArr}!`);
+        console.log(`${qArr} ${subjectArr} ${vArrX} ${vArrY} ${tArr}?`);
+        console.log(`${nArrX[0].toUpperCase()+nArrX.slice(1,nArrX.length)}!`);
     }    
     else if(qArr === 'Where do'){
-        console.log(`${qArr} ${subjectArr} ${vArr1} ${vArr2} ${nArr} ${tArr}?`);
+        console.log(`${qArr} ${subjectArr} ${vArrX} ${vArrY} ${nArrX} ${tArr}?`);
         console.log(`${placeArr}!`);
     }
     else if (qArr === 'Why do'){     
-        console.log(`${qArr} ${subjectArr} ${vArr1} ${vArr2} ${nArr} ${tArr}?`);
-        console.log(`Because they ${vArr1} ${vArr2} ${nArr}!`);
+        console.log(`${qArr} ${subjectArr} ${vArrX} ${vArrY} ${nArrX} ${tArr}?`);
+        vArrX = vArr1[Math.floor(Math.random()*vArr1.length)];
+        vArrY = vArr2[Math.floor(Math.random()*vArr2.length)];
+        nArrX = nArr[Math.floor(Math.random()*nArr.length)];  
+        console.log(`Because they ${vArrX} ${vArrY} ${nArrX}!`);
     }
     else if (qArr === 'When do'){
-        console.log(`${qArr} ${subjectArr} ${vArr1} ${vArr2} ${nArr}?`);
+        console.log(`${qArr} ${subjectArr} ${vArrX} ${vArrY} ${nArrX}?`);
         console.log(`Usually ${tArr}!`);
     }
     else if (qArr === 'Which'){
-        console.log(`${qArr} ${subjectArr} ${vArr1} ${vArr2} ${nArr} ${tArr}`);
+        console.log(`${qArr} ${subjectArr} ${vArrX} ${vArrY} ${nArrX} ${tArr}?`);
         console.log(`The ${adjArr} ones!`);
     }
 };
