@@ -10,7 +10,7 @@
 * [Inspiration](#inspiration)
 
 ## General info
-The program will log a random string, each of which is a different joke, from an array to the console using Node.js.
+The program will stitch together a nonsensical "joke" by stitching together strings (words) from various arrays that correspond to different areas of English grammar (verb array, noun array, adjective array, etc). It creates an opening and a punchline. Usually it ain't funny.
 
 ## Technologies
 * VS Code - Version 1.52.0
@@ -18,22 +18,26 @@ The program will log a random string, each of which is a different joke, from an
 * Node.js
 
 ## Setup
-Running the program in Node.js will output a random joke to the console from an array containing 20 unique strings of bad jokes.
+Running the script in Node.js will output a random joke to the console.
 
 ## Code Examples
-const randomJoke = arr => {
-    console.log(arr[Math.floor(Math.random()*arr.length)]);
-};
+randomJokeSetup(qArr,subjectArr,vArr1,vArr2,nArr,tArr,adjArr,placeArr); 
+//this is the function that executes the program. Each parameter is a different array that includes strings that correspond to a different category of English grammar.
 
 ## Features
 List of features ready and TODOs for future development
-* Includes a list of 20 jokes
+* Makes a nonsensical joke
+* Might make you laugh
+* It's completely free
 
 To-do list:
-* Write Javascript code that outputs random jokes whenever the script is run.
+* N/A
+
+Ideas for future improvement:
+* Limit the selection of certain words in the punchline based on how the setup question is structured.
 
 ## Status
-Project is: _in progress_
+Project is: __Complete... for now?__
 
 ## Inspiration
 This project is based on Codecademy's assignment "Mixed Messages" for the Full Stack Developer course.
